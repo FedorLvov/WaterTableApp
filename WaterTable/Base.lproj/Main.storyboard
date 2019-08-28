@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,96 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WaterTable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Название" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAW-tL-1tL">
+                                <rect key="frame" x="20" y="20" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="66E-h6-Iu2"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Цена" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RrE-bD-Q6e">
+                                <rect key="frame" x="180" y="20" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="pFy-Jz-LlZ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Количество" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agA-nt-1AP">
+                                <rect key="frame" x="265" y="20" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="J6y-p2-2eS"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P88-Em-iOe">
+                                <rect key="frame" x="20" y="70" width="528" height="230"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfT-ks-wFU">
+                                <rect key="frame" x="425" y="20" width="133" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="aoa-6C-XnV"/>
+                                    <constraint firstAttribute="height" constant="30" id="vAK-CT-Jud"/>
+                                </constraints>
+                                <state key="normal" title="Обновить скидки">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.036245735243500832" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateDiscountsButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="lA7-cA-1kt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Add-su-DvB">
+                                <rect key="frame" x="350" y="20" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="533-5R-eq8"/>
+                                    <constraint firstAttribute="width" constant="70" id="QDJ-IX-dNR"/>
+                                </constraints>
+                                <state key="normal" title="Добавить"/>
+                                <connections>
+                                    <action selector="pressAddButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="HEz-PD-LDN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P88-Em-iOe" secondAttribute="trailing" constant="20" id="8cV-Ke-6BR"/>
+                            <constraint firstItem="agA-nt-1AP" firstAttribute="leading" secondItem="RrE-bD-Q6e" secondAttribute="trailing" constant="10" id="NVZ-hC-cVa"/>
+                            <constraint firstItem="agA-nt-1AP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="R0l-z6-vPt"/>
+                            <constraint firstItem="P88-Em-iOe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SB4-uO-BH0"/>
+                            <constraint firstItem="RrE-bD-Q6e" firstAttribute="leading" secondItem="IAW-tL-1tL" secondAttribute="trailing" constant="10" id="TUN-XS-JtH"/>
+                            <constraint firstItem="RrE-bD-Q6e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UNf-fs-Q4v"/>
+                            <constraint firstItem="Add-su-DvB" firstAttribute="leading" secondItem="agA-nt-1AP" secondAttribute="trailing" constant="10" id="ezK-fl-dpq"/>
+                            <constraint firstItem="IAW-tL-1tL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hfp-uF-kSr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vfT-ks-wFU" secondAttribute="trailing" constant="10" id="hlN-ad-thT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P88-Em-iOe" secondAttribute="bottom" constant="20" id="ltl-7P-WMV"/>
+                            <constraint firstItem="vfT-ks-wFU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="mbr-cG-ONm"/>
+                            <constraint firstItem="Add-su-DvB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="seN-hV-HZH"/>
+                            <constraint firstItem="P88-Em-iOe" firstAttribute="top" secondItem="IAW-tL-1tL" secondAttribute="bottom" constant="20" id="yBj-rR-RvG"/>
+                            <constraint firstItem="IAW-tL-1tL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zlb-4o-UuC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="nameTF" destination="IAW-tL-1tL" id="5Uu-hB-Wqp"/>
+                        <outlet property="numberTF" destination="agA-nt-1AP" id="6As-f7-KBf"/>
+                        <outlet property="priceTF" destination="RrE-bD-Q6e" id="Z2e-jc-esN"/>
+                        <outlet property="tableView" destination="P88-Em-iOe" id="d42-vP-oeg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.98591549295776" y="131.25"/>
         </scene>
     </scenes>
 </document>

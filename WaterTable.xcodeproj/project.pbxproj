@@ -12,6 +12,8 @@
 		A98F22CF2316872B00B98064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98F22CD2316872B00B98064 /* Main.storyboard */; };
 		A98F22D12316872E00B98064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98F22D02316872E00B98064 /* Assets.xcassets */; };
 		A98F22D42316872E00B98064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98F22D22316872E00B98064 /* LaunchScreen.storyboard */; };
+		A98F22DF2316C4BE00B98064 /* WaterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F22DD2316C4BE00B98064 /* WaterTableViewCell.swift */; };
+		A98F22E02316C4BE00B98064 /* WaterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A98F22DE2316C4BE00B98064 /* WaterTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		A98F22D02316872E00B98064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A98F22D32316872E00B98064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A98F22D52316872E00B98064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A98F22DD2316C4BE00B98064 /* WaterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterTableViewCell.swift; sourceTree = "<group>"; };
+		A98F22DE2316C4BE00B98064 /* WaterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaterTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				A98F22D02316872E00B98064 /* Assets.xcassets */,
 				A98F22D22316872E00B98064 /* LaunchScreen.storyboard */,
 				A98F22D52316872E00B98064 /* Info.plist */,
+				A98F22DD2316C4BE00B98064 /* WaterTableViewCell.swift */,
+				A98F22DE2316C4BE00B98064 /* WaterTableViewCell.xib */,
 			);
 			path = WaterTable;
 			sourceTree = "<group>";
@@ -123,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A98F22D42316872E00B98064 /* LaunchScreen.storyboard in Resources */,
+				A98F22E02316C4BE00B98064 /* WaterTableViewCell.xib in Resources */,
 				A98F22D12316872E00B98064 /* Assets.xcassets in Resources */,
 				A98F22CF2316872B00B98064 /* Main.storyboard in Resources */,
 			);
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98F22DF2316C4BE00B98064 /* WaterTableViewCell.swift in Sources */,
 				A98F22CC2316872B00B98064 /* ViewController.swift in Sources */,
 				A98F22CA2316872B00B98064 /* AppDelegate.swift in Sources */,
 			);
